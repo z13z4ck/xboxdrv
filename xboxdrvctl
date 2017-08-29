@@ -69,7 +69,7 @@ elif options.bus == "auto":
     try:
         bus.get_object("org.seul.Xboxdrv", '/org/seul/Xboxdrv/Daemon')
     except dbus.exceptions.DBusException:
-				bus = dbus.SystemBus()
+        bus = dbus.SystemBus()
 else:
     print "Error: invalid argument to --bus. Must be 'auto', 'session, or 'system'"
     exit()
